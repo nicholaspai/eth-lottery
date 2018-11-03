@@ -1,0 +1,20 @@
+{
+  "name": "lottery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ganache": "ganache-cli --port 9545 --deterministic",
+    "zos-upgrade": "zos push --deploy-dependencies && zos update --all",
+    "compile": "zos push --deploy-dependencies"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ganache-cli": "^6.1.8",
+    "openzeppelin-eth": "^2.0.2",
+    "zos": "^2.0.1",
+    "zos-lib": "^2.0.1"
+  }
+}

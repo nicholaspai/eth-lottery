@@ -1,0 +1,150 @@
+{
+  "contracts": {
+    "MyContract": {
+      "address": "0xbe0b0f08a599f07699e98a9d001084e97b9a900a",
+      "constructorCode": "608060405234801561001057600080fd5b5061049a806100206000396000f300",
+      "bodyBytecodeHash": "082a52b226f1a7e19379d865fa1644d307b177b1ef0d5a472de0049867bef8d6",
+      "localBytecodeHash": "5870c6430c97f75e0765c149fe86ba8a7aa262871b7c7be04bc816a35b722443",
+      "deployedBytecodeHash": "5870c6430c97f75e0765c149fe86ba8a7aa262871b7c7be04bc816a35b722443",
+      "types": {
+        "t_bool": {
+          "id": "t_bool",
+          "kind": "elementary",
+          "label": "bool"
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_array:50<t_uint256>": {
+          "id": "t_array:50<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "50",
+          "kind": "array",
+          "label": "uint256[50]"
+        },
+        "t_string": {
+          "id": "t_string",
+          "kind": "elementary",
+          "label": "string"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "initialized",
+          "astId": 39,
+          "type": "t_bool",
+          "src": "749:24:1"
+        },
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "initializing",
+          "astId": 41,
+          "type": "t_bool",
+          "src": "868:25:1"
+        },
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "______gap",
+          "astId": 90,
+          "type": "t_array:50<t_uint256>",
+          "src": "1883:29:1"
+        },
+        {
+          "contract": "MyContract",
+          "path": "contracts/MyContract.sol",
+          "label": "x",
+          "astId": 6,
+          "type": "t_uint256",
+          "src": "115:16:0"
+        },
+        {
+          "contract": "MyContract",
+          "path": "contracts/MyContract.sol",
+          "label": "s",
+          "astId": 8,
+          "type": "t_string",
+          "src": "135:15:0"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": [],
+        "storageUncheckedVars": [],
+        "storageDiff": []
+      }
+    },
+    "MyLinkedContract": {
+      "address": "0x39645fdff0fc2792a0b63734fec99d9fee98eec1",
+      "constructorCode": "608060405234801561001057600080fd5b50610134806100206000396000f300",
+      "bodyBytecodeHash": "b403175ec246e2df153bbaba6f55701418db49c445b8f417bec79f4648c5254c",
+      "localBytecodeHash": "5604bd950dc304e3c08bf4b6e4f36da8b3fc9f389097e62750f78985866564a1",
+      "deployedBytecodeHash": "5604bd950dc304e3c08bf4b6e4f36da8b3fc9f389097e62750f78985866564a1",
+      "types": {
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        }
+      },
+      "storage": [
+        {
+          "contract": "MyLinkedContract",
+          "path": "contracts/MyLinkedContract.sol",
+          "label": "_token",
+          "astId": 40,
+          "type": "t_address",
+          "src": "126:29:1"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    }
+  },
+  "solidityLibs": {},
+  "proxies": {
+    "lottery/MyContract": [
+      {
+        "address": "0xfa33c8ef8b5c4f3003361c876a298d1db61cca4e",
+        "version": "0.1.0",
+        "implementation": "0xbe0b0f08a599f07699e98a9d001084e97b9a900a"
+      }
+    ],
+    "lottery/MyLinkedContract": [
+      {
+        "address": "0x586643c7d083a83e4b0fcaae87945d31a21b5e7e",
+        "version": "0.1.0",
+        "implementation": "0x39645fdff0fc2792a0b63734fec99d9fee98eec1"
+      }
+    ],
+    "openzeppelin-eth/StandaloneERC721": [
+      {
+        "address": "0x9000d9c358dc56200000b0e3710e1a9e8985e058",
+        "version": "2.0.2",
+        "implementation": "0x25f96b23947f3e57b29d15760fd8af926694fa81"
+      }
+    ]
+  },
+  "zosversion": "2",
+  "version": "0.1.0",
+  "dependencies": {
+    "openzeppelin-eth": {
+      "package": "0x5d18ded3c0a476fcbc9e67fc1c613cfc5dd0d34b",
+      "version": "2.0.2",
+      "customDeploy": true
+    }
+  }
+}
