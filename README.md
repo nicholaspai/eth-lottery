@@ -35,23 +35,30 @@ In between each round r, there will be opporunities to trade tickets, which will
 
     After round 3 where '0' is revealed to be the fourth bit of L, there will only be one winning ticket. No trading will or should occur after this point since that ticket has won the prize P
 
-# Implementation
+# Startup
 
 Start local ethereum node with `npm run ganache` 
 
 Contracts are built with [ZeppelinOS](https://docs.zeppelinos.org/docs/deploying.html) which is a wrapper around Truffle for deploying upgradeable smart contracts
 
-1) Add CONTRACT.sol `/contracts/` to zos project with `zos add [CONTRACT]`. This will compile the contract with and add it to `zos.json`
+1) Add CONTRACT.sol `/contracts/` to zos project with `zos add [CONTRACT]`. This will compile the contract with and add it to `zos.json`. These contracts will be deployed to the network via `zpm push`
 
-2) Start a zos session to work with a desired network with `zos session --network local --from 0x1df62f291b2e969fb0849d99d9ce41e2f137006e --expires 3600` where the sender "from" is the ["admin" of the Upgradeable Proxy contract](https://docs.zeppelinos.org/docs/pattern.html#transparent-proxies-and-function-clashes). The session will expire in 60 minutes (3600 seconds).
+2) `npm run zos-session`: Start a zos session to work with a desired network with `zos session --network local --from 0x1df62f291b2e969fb0849d99d9ce41e2f137006e --expires 3600` where the sender "from" is the ["admin" of the Upgradeable Proxy contract](https://docs.zeppelinos.org/docs/pattern.html#transparent-proxies-and-function-clashes). The session will expire in 60 minutes (3600 seconds).
 
-3) Deploy contracts with `zos push`. The push command also creates a `zos.dev-<network_id>.json` file with all the information about your project in this specific network, including the addresses of the deployed contract implementations in contracts["MyContract"].address. You can read more about this file format in the [configuration files](https://docs.zeppelinos.org/docs/configuration.html#zos-network-json) section.
+3) `npm run zos-push`: Deploy contracts with `zos push`. The push command also creates a `zos.dev-<network_id>.json` file with all the information about your project in this specific network, including the addresses of the deployed contract implementations in contracts["MyContract"].address. You can read more about this file format in the [configuration files](https://docs.zeppelinos.org/docs/configuration.html#zos-network-json) section.
 
 4) Create an upgradeable version of your contract with `zos create MyContract --init initialize --args 42,hitchhiker` where 42 and hitchiker are comma-delimited args to the `MyContract.initialize()` function.
 
-5) To upgrade, run `zos push` and `zos update`
+5) To upgrade logic contracts, run `zos push` and `zos update`
 
 6) For more information on writing zos-compatible upgradeable contracts read the [docs](https://docs.zeppelinos.org/docs/writing_contracts.html)
 
 7) Guide for deploying to [mainnet](https://docs.zeppelinos.org/docs/mainnet)
+
+# Contracts
+
+## Lottery Game
+
+`initialize`: takes a number N indicating the number of tickets to distribute
+`generateWinner`: generates a winning bitstring
 

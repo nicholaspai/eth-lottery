@@ -6,9 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "ganache": "ganache-cli --port 9545 --deterministic",
-    "zos-upgrade": "zos push --deploy-dependencies && zos update --all",
-    "compile": "zos push --deploy-dependencies",
-    "test-lottery": "truffle test ./tests/LotteryGame.test.js"
+    "zos-session": "zos session --network local --from 0x1df62f291b2e969fb0849d99d9ce41e2f137006e --expires 3600",
+    "zos-push": "zos push --deploy-dependencies",
+    "zos-upgrade": "zos update --all",
+    "compile": "truffle compile",
+    "test-lottery": "export NODE_ENV=test && truffle test ./tests/LotteryGame.test.js"
   },
   "author": "",
   "license": "ISC",
