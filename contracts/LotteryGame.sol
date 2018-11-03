@@ -28,4 +28,10 @@ contract LotteryGame is Initializable {
         return byte(_num);
     }
 
+    //TODO:
+    // Add following methods
+    // Int to bit string
+    // Generate ith bit
+    // Random number generator https://medium.com/@promentol/lottery-smart-contract-can-we-generate-random-numbers-in-solidity-4f586a152b27
+
 }
