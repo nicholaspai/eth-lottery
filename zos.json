@@ -4,7 +4,8 @@
   "version": "0.1.0",
   "contracts": {
     "MyContract": "MyContract",
-    "MyLinkedContract": "MyLinkedContract"
+    "MyLinkedContract": "MyLinkedContract",
+    "LotteryGame": "LotteryGame"
   },
   "dependencies": {
     "openzeppelin-eth": "^2.0.2"

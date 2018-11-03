@@ -6,7 +6,6 @@ contract MyContract is Initializable {
 
   uint256 public x;
   string public s;
-  bool private initialized;
 
   // initializer function is effectively the constructor
   function initialize(uint256 _x, string _s) initializer public {

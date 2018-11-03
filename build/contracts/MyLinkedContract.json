@@ -18,22 +18,22 @@
   ],
   "bytecode": "0x608060405234801561001057600080fd5b50610134806100206000396000f300608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063144fa6d714610046575b600080fd5b34801561005257600080fd5b50610087600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610089565b005b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141515156100c557600080fd5b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505600a165627a7a72305820993f8ceaa7798522009b6e2d80b01a2ad5adf92a1e2ff81bddf26b05cbe1c62f0029",
   "deployedBytecode": "0x608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063144fa6d714610046575b600080fd5b34801561005257600080fd5b50610087600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610089565b005b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141515156100c557600080fd5b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505600a165627a7a72305820993f8ceaa7798522009b6e2d80b01a2ad5adf92a1e2ff81bddf26b05cbe1c62f0029",
-  "sourceMap": "96:174:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;96:174:1;;;;;;;",
-  "deployedSourceMap": "96:174:1:-;;;;;;;;;;;;;;;;;;;;;;;;160:108;;8:9:-1;5:2;;;30:1;27;20:12;5:2;160:108:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;240:1;223:19;;:5;:19;;;;215:28;;;;;;;;258:5;249:6;;:14;;;;;;;;;;;;;;;;;;160:108;:::o",
+  "sourceMap": "96:174:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;96:174:2;;;;;;;",
+  "deployedSourceMap": "96:174:2:-;;;;;;;;;;;;;;;;;;;;;;;;160:108;;8:9:-1;5:2;;;30:1;27;20:12;5:2;160:108:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;240:1;223:19;;:5;:19;;;;215:28;;;;;;;;258:5;249:6;;:14;;;;;;;;;;;;;;;;;;160:108;:::o",
   "source": "pragma solidity ^0.4.24;\n\nimport \"openzeppelin-eth/contracts/token/ERC721/ERC721Mintable.sol\";\n\ncontract MyLinkedContract {\n  ERC721Mintable private _token;\n\n  function setToken(ERC721Mintable token) external {\n    require(token != address(0));\n    _token = token;\n  }\n}",
   "sourcePath": "/Users/nicholaspai/Carbon/lottery/contracts/MyLinkedContract.sol",
   "ast": {
     "absolutePath": "/Users/nicholaspai/Carbon/lottery/contracts/MyLinkedContract.sol",
     "exportedSymbols": {
       "MyLinkedContract": [
-        61
+        123
       ]
     },
-    "id": 62,
+    "id": 124,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 39,
+        "id": 101,
         "literals": [
           "solidity",
           "^",
@@ -41,16 +41,16 @@
           ".24"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:24:1"
+        "src": "0:24:2"
       },
       {
         "absolutePath": "openzeppelin-eth/contracts/token/ERC721/ERC721Mintable.sol",
         "file": "openzeppelin-eth/contracts/token/ERC721/ERC721Mintable.sol",
-        "id": 40,
+        "id": 102,
         "nodeType": "ImportDirective",
-        "scope": 62,
-        "sourceUnit": 1082,
-        "src": "26:68:1",
+        "scope": 124,
+        "sourceUnit": 1144,
+        "src": "26:68:2",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -60,35 +60,35 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 61,
+        "id": 123,
         "linearizedBaseContracts": [
-          61
+          123
         ],
         "name": "MyLinkedContract",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 42,
+            "id": 104,
             "name": "_token",
             "nodeType": "VariableDeclaration",
-            "scope": 61,
-            "src": "126:29:1",
+            "scope": 123,
+            "src": "126:29:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_ERC721Mintable_$1081",
+              "typeIdentifier": "t_contract$_ERC721Mintable_$1143",
               "typeString": "contract ERC721Mintable"
             },
             "typeName": {
               "contractScope": null,
-              "id": 41,
+              "id": 103,
               "name": "ERC721Mintable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1081,
-              "src": "126:14:1",
+              "referencedDeclaration": 1143,
+              "src": "126:14:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC721Mintable_$1081",
+                "typeIdentifier": "t_contract$_ERC721Mintable_$1143",
                 "typeString": "contract ERC721Mintable"
               }
             },
@@ -97,9 +97,9 @@
           },
           {
             "body": {
-              "id": 59,
+              "id": 121,
               "nodeType": "Block",
-              "src": "209:59:1",
+              "src": "209:59:2",
               "statements": [
                 {
                   "expression": {
@@ -111,21 +111,21 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 52,
+                        "id": 114,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 48,
+                          "id": 110,
                           "name": "token",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 44,
-                          "src": "223:5:1",
+                          "referencedDeclaration": 106,
+                          "src": "223:5:2",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_ERC721Mintable_$1081",
+                            "typeIdentifier": "t_contract$_ERC721Mintable_$1143",
                             "typeString": "contract ERC721Mintable"
                           }
                         },
@@ -137,14 +137,14 @@
                             {
                               "argumentTypes": null,
                               "hexValue": "30",
-                              "id": 50,
+                              "id": 112,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
                               "kind": "number",
                               "lValueRequested": false,
                               "nodeType": "Literal",
-                              "src": "240:1:1",
+                              "src": "240:1:2",
                               "subdenomination": null,
                               "typeDescriptions": {
                                 "typeIdentifier": "t_rational_0_by_1",
@@ -160,20 +160,20 @@
                                 "typeString": "int_const 0"
                               }
                             ],
-                            "id": 49,
+                            "id": 111,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "lValueRequested": false,
                             "nodeType": "ElementaryTypeNameExpression",
-                            "src": "232:7:1",
+                            "src": "232:7:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_type$_t_address_$",
                               "typeString": "type(address)"
                             },
                             "typeName": "address"
                           },
-                          "id": 51,
+                          "id": 113,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -181,13 +181,13 @@
                           "lValueRequested": false,
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "232:10:1",
+                          "src": "232:10:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
                           }
                         },
-                        "src": "223:19:1",
+                        "src": "223:19:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -201,21 +201,21 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 47,
+                      "id": 109,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1296,
-                        1297
+                        1358,
+                        1359
                       ],
-                      "referencedDeclaration": 1296,
-                      "src": "215:7:1",
+                      "referencedDeclaration": 1358,
+                      "src": "215:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 53,
+                    "id": 115,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -223,34 +223,34 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "215:28:1",
+                    "src": "215:28:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 54,
+                  "id": 116,
                   "nodeType": "ExpressionStatement",
-                  "src": "215:28:1"
+                  "src": "215:28:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 57,
+                    "id": 119,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 55,
+                      "id": 117,
                       "name": "_token",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 42,
-                      "src": "249:6:1",
+                      "referencedDeclaration": 104,
+                      "src": "249:6:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ERC721Mintable_$1081",
+                        "typeIdentifier": "t_contract$_ERC721Mintable_$1143",
                         "typeString": "contract ERC721Mintable"
                       }
                     },
@@ -258,31 +258,31 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 56,
+                      "id": 118,
                       "name": "token",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 44,
-                      "src": "258:5:1",
+                      "referencedDeclaration": 106,
+                      "src": "258:5:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ERC721Mintable_$1081",
+                        "typeIdentifier": "t_contract$_ERC721Mintable_$1143",
                         "typeString": "contract ERC721Mintable"
                       }
                     },
-                    "src": "249:14:1",
+                    "src": "249:14:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC721Mintable_$1081",
+                      "typeIdentifier": "t_contract$_ERC721Mintable_$1143",
                       "typeString": "contract ERC721Mintable"
                     }
                   },
-                  "id": 58,
+                  "id": 120,
                   "nodeType": "ExpressionStatement",
-                  "src": "249:14:1"
+                  "src": "249:14:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 60,
+            "id": 122,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -290,31 +290,31 @@
             "name": "setToken",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 45,
+              "id": 107,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 44,
+                  "id": 106,
                   "name": "token",
                   "nodeType": "VariableDeclaration",
-                  "scope": 60,
-                  "src": "178:20:1",
+                  "scope": 122,
+                  "src": "178:20:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_ERC721Mintable_$1081",
+                    "typeIdentifier": "t_contract$_ERC721Mintable_$1143",
                     "typeString": "contract ERC721Mintable"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 43,
+                    "id": 105,
                     "name": "ERC721Mintable",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 1081,
-                    "src": "178:14:1",
+                    "referencedDeclaration": 1143,
+                    "src": "178:14:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC721Mintable_$1081",
+                      "typeIdentifier": "t_contract$_ERC721Mintable_$1143",
                       "typeString": "contract ERC721Mintable"
                     }
                   },
@@ -322,40 +322,40 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "177:22:1"
+              "src": "177:22:2"
             },
             "payable": false,
             "returnParameters": {
-              "id": 46,
+              "id": 108,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "209:0:1"
+              "src": "209:0:2"
             },
-            "scope": 61,
-            "src": "160:108:1",
+            "scope": 123,
+            "src": "160:108:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 62,
-        "src": "96:174:1"
+        "scope": 124,
+        "src": "96:174:2"
       }
     ],
-    "src": "0:270:1"
+    "src": "0:270:2"
   },
   "legacyAST": {
     "absolutePath": "/Users/nicholaspai/Carbon/lottery/contracts/MyLinkedContract.sol",
     "exportedSymbols": {
       "MyLinkedContract": [
-        61
+        123
       ]
     },
-    "id": 62,
+    "id": 124,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 39,
+        "id": 101,
         "literals": [
           "solidity",
           "^",
@@ -363,16 +363,16 @@
           ".24"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:24:1"
+        "src": "0:24:2"
       },
       {
         "absolutePath": "openzeppelin-eth/contracts/token/ERC721/ERC721Mintable.sol",
         "file": "openzeppelin-eth/contracts/token/ERC721/ERC721Mintable.sol",
-        "id": 40,
+        "id": 102,
         "nodeType": "ImportDirective",
-        "scope": 62,
-        "sourceUnit": 1082,
-        "src": "26:68:1",
+        "scope": 124,
+        "sourceUnit": 1144,
+        "src": "26:68:2",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -382,35 +382,35 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 61,
+        "id": 123,
         "linearizedBaseContracts": [
-          61
+          123
         ],
         "name": "MyLinkedContract",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 42,
+            "id": 104,
             "name": "_token",
             "nodeType": "VariableDeclaration",
-            "scope": 61,
-            "src": "126:29:1",
+            "scope": 123,
+            "src": "126:29:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_ERC721Mintable_$1081",
+              "typeIdentifier": "t_contract$_ERC721Mintable_$1143",
               "typeString": "contract ERC721Mintable"
             },
             "typeName": {
               "contractScope": null,
-              "id": 41,
+              "id": 103,
               "name": "ERC721Mintable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1081,
-              "src": "126:14:1",
+              "referencedDeclaration": 1143,
+              "src": "126:14:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC721Mintable_$1081",
+                "typeIdentifier": "t_contract$_ERC721Mintable_$1143",
                 "typeString": "contract ERC721Mintable"
               }
             },
@@ -419,9 +419,9 @@
           },
           {
             "body": {
-              "id": 59,
+              "id": 121,
               "nodeType": "Block",
-              "src": "209:59:1",
+              "src": "209:59:2",
               "statements": [
                 {
                   "expression": {
@@ -433,21 +433,21 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 52,
+                        "id": 114,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 48,
+                          "id": 110,
                           "name": "token",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 44,
-                          "src": "223:5:1",
+                          "referencedDeclaration": 106,
+                          "src": "223:5:2",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_ERC721Mintable_$1081",
+                            "typeIdentifier": "t_contract$_ERC721Mintable_$1143",
                             "typeString": "contract ERC721Mintable"
                           }
                         },
@@ -459,14 +459,14 @@
                             {
                               "argumentTypes": null,
                               "hexValue": "30",
-                              "id": 50,
+                              "id": 112,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
                               "kind": "number",
                               "lValueRequested": false,
                               "nodeType": "Literal",
-                              "src": "240:1:1",
+                              "src": "240:1:2",
                               "subdenomination": null,
                               "typeDescriptions": {
                                 "typeIdentifier": "t_rational_0_by_1",
@@ -482,20 +482,20 @@
                                 "typeString": "int_const 0"
                               }
                             ],
-                            "id": 49,
+                            "id": 111,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "lValueRequested": false,
                             "nodeType": "ElementaryTypeNameExpression",
-                            "src": "232:7:1",
+                            "src": "232:7:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_type$_t_address_$",
                               "typeString": "type(address)"
                             },
                             "typeName": "address"
                           },
-                          "id": 51,
+                          "id": 113,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -503,13 +503,13 @@
                           "lValueRequested": false,
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "232:10:1",
+                          "src": "232:10:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
                           }
                         },
-                        "src": "223:19:1",
+                        "src": "223:19:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -523,21 +523,21 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 47,
+                      "id": 109,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1296,
-                        1297
+                        1358,
+                        1359
                       ],
-                      "referencedDeclaration": 1296,
-                      "src": "215:7:1",
+                      "referencedDeclaration": 1358,
+                      "src": "215:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 53,
+                    "id": 115,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -545,34 +545,34 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "215:28:1",
+                    "src": "215:28:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 54,
+                  "id": 116,
                   "nodeType": "ExpressionStatement",
-                  "src": "215:28:1"
+                  "src": "215:28:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 57,
+                    "id": 119,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 55,
+                      "id": 117,
                       "name": "_token",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 42,
-                      "src": "249:6:1",
+                      "referencedDeclaration": 104,
+                      "src": "249:6:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ERC721Mintable_$1081",
+                        "typeIdentifier": "t_contract$_ERC721Mintable_$1143",
                         "typeString": "contract ERC721Mintable"
                       }
                     },
@@ -580,31 +580,31 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 56,
+                      "id": 118,
                       "name": "token",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 44,
-                      "src": "258:5:1",
+                      "referencedDeclaration": 106,
+                      "src": "258:5:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ERC721Mintable_$1081",
+                        "typeIdentifier": "t_contract$_ERC721Mintable_$1143",
                         "typeString": "contract ERC721Mintable"
                       }
                     },
-                    "src": "249:14:1",
+                    "src": "249:14:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC721Mintable_$1081",
+                      "typeIdentifier": "t_contract$_ERC721Mintable_$1143",
                       "typeString": "contract ERC721Mintable"
                     }
                   },
-                  "id": 58,
+                  "id": 120,
                   "nodeType": "ExpressionStatement",
-                  "src": "249:14:1"
+                  "src": "249:14:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 60,
+            "id": 122,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -612,31 +612,31 @@
             "name": "setToken",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 45,
+              "id": 107,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 44,
+                  "id": 106,
                   "name": "token",
                   "nodeType": "VariableDeclaration",
-                  "scope": 60,
-                  "src": "178:20:1",
+                  "scope": 122,
+                  "src": "178:20:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_ERC721Mintable_$1081",
+                    "typeIdentifier": "t_contract$_ERC721Mintable_$1143",
                     "typeString": "contract ERC721Mintable"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 43,
+                    "id": 105,
                     "name": "ERC721Mintable",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 1081,
-                    "src": "178:14:1",
+                    "referencedDeclaration": 1143,
+                    "src": "178:14:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC721Mintable_$1081",
+                      "typeIdentifier": "t_contract$_ERC721Mintable_$1143",
                       "typeString": "contract ERC721Mintable"
                     }
                   },
@@ -644,27 +644,27 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "177:22:1"
+              "src": "177:22:2"
             },
             "payable": false,
             "returnParameters": {
-              "id": 46,
+              "id": 108,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "209:0:1"
+              "src": "209:0:2"
             },
-            "scope": 61,
-            "src": "160:108:1",
+            "scope": 123,
+            "src": "160:108:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 62,
-        "src": "96:174:1"
+        "scope": 124,
+        "src": "96:174:2"
       }
     ],
-    "src": "0:270:1"
+    "src": "0:270:2"
   },
   "compiler": {
     "name": "solc",
@@ -679,5 +679,5 @@
     }
   },
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-11-03T20:06:25.232Z"
+  "updatedAt": "2018-11-03T21:54:42.259Z"
 }
