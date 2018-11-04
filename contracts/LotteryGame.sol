@@ -27,7 +27,9 @@ contract LotteryGame is Initializable {
     // Generate winning 8-bit bitstring
     function generateWinner() public {
         
-        uint8 randomNumber = uint8(123);
+        // FIXME: THIS IS NOT SECURE BUT ITS A PLACEHOLDER
+        uint256 random = uint256(keccak256(block.timestamp))%numParticipants +1;
+        uint8 randomNumber = uint8(random);
         winner = toByte(randomNumber);
     }
 
