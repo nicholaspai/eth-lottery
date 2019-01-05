@@ -41,6 +41,8 @@ Start local ethereum node with `npm run ganache`
 
 Contracts are built with [ZeppelinOS](https://docs.zeppelinos.org/docs/deploying.html) which is a wrapper around Truffle for deploying upgradeable smart contracts
 
+[Good overview of Truffle v5 & ZeppelinOS v2](https://paulrberg.com/post/2018/12/30/upgradeable-smart-contracts/)
+
 1) Add CONTRACT.sol `/contracts/` to zos project with `zos add [CONTRACT]`. This will compile the contract with and add it to `zos.json`. These contracts will be deployed to the network via `zpm push`
 
 2) `npm run zos-session`: Start a zos session to work with a desired network with `zos session --network local --from 0x1df62f291b2e969fb0849d99d9ce41e2f137006e --expires 3600` where the sender "from" is the ["admin" of the Upgradeable Proxy contract](https://docs.zeppelinos.org/docs/pattern.html#transparent-proxies-and-function-clashes). The session will expire in 60 minutes (3600 seconds).
@@ -61,4 +63,7 @@ Contracts are built with [ZeppelinOS](https://docs.zeppelinos.org/docs/deploying
 
 `initialize`: takes a number N indicating the number of tickets to distribute
 `generateWinner`: generates a winning bitstring
+
+## Lottery Exchange AMM (Automated Market Maker)
+Uniswap-style AMM that always provides liquidity for outstanding lottery tickets at fair value prices. This should be easily calculatable because of the game's rules.
 

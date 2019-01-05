@@ -3,6 +3,7 @@ pragma solidity ^0.4.24;
 import "zos-lib/contracts/Initializable.sol";
 
 // Generates an 8-bit winning bitstring
+// TODO: READ THIS: https://medium.com/coinmonks/lottery-as-a-smart-contract-the-execution-904a26201338
 contract LotteryGame is Initializable {
 
     uint256 public numRounds; // Number of rounds
@@ -25,6 +26,8 @@ contract LotteryGame is Initializable {
     }
 
     // Generate winning 8-bit bitstring
+    // Checkout: https://gist.github.com/anonymous/06a86a039f01dc15fd14
+    // https://www.reddit.com/r/ethereum/comments/442z66/how_to_generate_a_number_between_110_in_solidity/
     function generateWinner() public {
         
         // FIXME: THIS IS NOT SECURE BUT ITS A PLACEHOLDER
